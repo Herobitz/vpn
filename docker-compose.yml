@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  finance_app:
+    build: .
+    volumes:
+      - .:/app
+      - db_data:/app/finance_app
+    working_dir: /app/finance_app
+    command: /bin/sh -c "alembic upgrade head && python ui/main.py"
+    environment:
+      - PYTHONUNBUFFERED=1
+volumes:
+  db_data: 

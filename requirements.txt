@@ -1,0 +1,12 @@
+pytesseract
+pillow
+PySimpleGUI
+sqlalchemy
+alembic
+matplotlib
+gspread
+pytest
+black
+flake8
+pycryptodome
+python-dateutil 
