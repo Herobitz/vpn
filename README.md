@@ -18,9 +18,9 @@
    pip install -r requirements.txt
    ```
 4. Запустите приложение:
-   ```bat
-    python finance_app/ui/main.py
-   ```
+    ```bat
+     python -m finance_app.ui.main
+    ```
 
 ---
 
