@@ -1,34 +1,39 @@
 # Домашняя финансовая система (MVP)
 
-## Установка и запуск (локально)
+> ⚠️ **Внимание:** Для работы OCR необходим установленный [Tesseract-OCR](https://github.com/tesseract-ocr/tesseract). После установки убедитесь, что путь к tesseract.exe добавлен в переменную среды PATH.
 
-```bash
-python -m venv venv
-source venv/bin/activate  # или venv\Scripts\activate для Windows
-pip install -r requirements.txt
-```
+---
 
-## Миграции Alembic
+## Быстрый запуск (Windows)
 
-```bash
-alembic init db/migrations  # только при первом запуске, если нет папки
-# Проверьте, что в db/migrations/env.py используется metadata из db.models
-alembic revision --autogenerate -m "init"
-alembic upgrade head
-```
+1. Установите [Python 3.10+](https://www.python.org/downloads/)
+2. Установите [Tesseract-OCR](https://github.com/tesseract-ocr/tesseract) и добавьте путь к tesseract.exe в PATH
+3. Откройте командную строку в папке проекта и выполните:
+   ```bat
+   python -m venv venv
+   venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
+4. Запустите приложение:
+   ```bat
+   python ui/main.py
+   ```
 
-## Запуск приложения и тестов
+---
 
-```bash
-pytest && alembic upgrade head && python ui/main.py
-```
+## Сборка Windows-exe
 
-## Docker
+1. Установите зависимости:
+   ```bat
+   pip install -r requirements.txt
+   ```
+2. Соберите exe:
+   ```bat
+   build.bat
+   ```
+3. В папке dist/ появится `finance.exe` — двойной клик, и приложение готово.
 
-```bash
-docker-compose build
-docker-compose up
-```
+---
 
 ## Добавление новых правил категоризации
 
@@ -41,11 +46,15 @@ docker-compose up
    ```
 2. В GUI нажмите "Загрузить правила из JSON" и выберите файл.
 
+---
+
 ## Тесты
 
-```bash
+```bat
 pytest
 ```
+
+---
 
 ## Структура
 - data/parser.py — OCR и парсинг выписок
