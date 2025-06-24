@@ -16,7 +16,7 @@
    ```
 4. Запустите приложение:
    ```bat
-   python ui/main.py
+    python finance_app/ui/main.py
    ```
 
 ---
@@ -57,9 +57,9 @@ pytest
 ---
 
 ## Структура
-- data/parser.py — OCR и парсинг выписок
-- db/models.py — SQLAlchemy-модели
-- logic/categorizer.py — категоризация
-- ui/main.py — GUI
-- analytics/reports.py — отчёты
-- tests/ — тесты 
+- finance_app/data/parser.py — OCR и парсинг выписок
+- finance_app/db/models.py — SQLAlchemy-модели
+- finance_app/logic/categorizer.py — категоризация
+- finance_app/ui/main.py — GUI
+- finance_app/analytics/reports.py — отчёты
+- tests/ — тесты
