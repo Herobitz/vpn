@@ -7,7 +7,10 @@
 ## Быстрый запуск (Windows)
 
 1. Установите [Python 3.10+](https://www.python.org/downloads/)
-2. Установите [Tesseract-OCR](https://github.com/tesseract-ocr/tesseract) и добавьте путь к tesseract.exe в PATH
+2. Установите [Tesseract-OCR](https://github.com/tesseract-ocr/tesseract) и добавьте путь к `tesseract.exe` в `PATH`.
+   * Скачайте Windows-установщик, например с [страницы проекта UB Mannheim](https://github.com/UB-Mannheim/tesseract/wiki), и запустите его.
+   * При установке выберите нужные языковые пакеты.
+   * После завершения убедитесь, что каталог, где находится `tesseract.exe` (обычно `C:\\Program Files\\Tesseract-OCR`), добавлен в переменную среды `PATH`.
 3. Откройте командную строку в папке проекта и выполните:
    ```bat
    python -m venv venv
