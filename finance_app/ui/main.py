@@ -80,7 +80,7 @@ def main():
         [sg.Table(values=[], headings=['Дата', 'Сумма', 'Описание', 'Категория'], key='-TABLE-', auto_size_columns=True, justification='left', enable_events=True, select_mode=sg.TABLE_SELECT_MODE_BROWSE)],
         [sg.Button('Загрузить правила из JSON')]
     ]
-    window = sg.Window('Домашняя финансовая система', layout)
+    window = sg.Window('Домашняя финансовая система', layout, finalize=True)
     transactions = load_transactions_from_db()
     display_transactions(window, transactions)
     while True:
